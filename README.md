@@ -1,7 +1,6 @@
 ### To get started with building The Pixel Project GSI,
 You'll need to get familiar with [Git and Repo](https://source.android.com/source/using-repo.html) as well as [How to build a GSI](https://github.com/phhusson/treble_experimentations/wiki/How-to-build-a-GSI%3F).
 
-
 ### Create the directories
 As a first step, you'll have to create and enter a folder with the appropriate name
 To do that, run these commands:
@@ -15,14 +14,11 @@ cd tpp
 ```bash
 repo init -u https://github.com/The-Pixel-Project/manifest -b fourteen-qpr3 -g default,-mips,-darwin,-notdefault --git-lfs
 ```
- 
 
 ### Clone the Manifest to add necessary dependencies for gsi:
-```
+```bash
 git clone https://github.com/MisterZtr/treble_manifest.git .repo/local_manifests  -b 14
 ```
-  
-
 
 ### Afterwards, sync the source by running this command:
 ```bash
@@ -40,7 +36,6 @@ Where:
 
 C: Country code (e.g., US) ST: State name L: City name O: Organization name OU: Organizational Unit name CN: Common name emailAddress: Your email address
 
-
 ### Next, apply patches:
 Copy the patches folder to rom folder and in rom folder
 
@@ -49,12 +44,11 @@ bash patches/apply-patches.sh .
 ```
 
 ## Generating Rom Makefile
-Clone this repository and then copy tpp.mk to device/phh/treble in rom folder. Then run the following commands:,
- 
- ```
+Clone this repository and then copy tpp.mk to device/phh/treble in rom folder. Then run the following commands:
+```
 cd device/phh/treble
 bash generate.sh tpp
- ```
+```
 
 ### Turn on caching to speed up build
 You can speed up subsequent builds by adding these lines to your ~/.bashrc OR ~/.zshrc file:
@@ -67,38 +61,31 @@ export CCACHE_MAXSIZE=50G # 50 GB
 
 ## Compilation 
 In rom folder,
-
- ```
+```
 . build/envsetup.sh
 ccache -M 50G -F 0
 lunch treble_arm64_bN-ap2a-userdebug
 make systemimage -j$(nproc --all)
- ```
-
+```
 
 ## Compress
 After compilation,
-If you want to compress the build, i recommend use [7-zip](https://aur.archlinux.org/packages/7-zip), for a fast and safe way
+If you want to compress the build, I recommend use [7-zip](https://aur.archlinux.org/packages/7-zip), for a fast and safe way
 In rom folder,
-
-   ```
+```
 cd out/target/product/tdgsi_arm64_ab
 7zz a system.img.xz "system.img"
-   ```
-
+```
 
 ## Create VNDK Lite variant
-Copy the resulting system.img to the treble_adapter folder in rom
-Then,
+Copy the resulting system.img to the treble_adapter folder in rom. Then,
 
- ```
+```
 sudo bash lite-adapter.sh 64 system.img
- ```
-
+```
 
 ## Troubleshoot
 If you face any conflicts while applying patches, apply the patch manually
-
 
 ## Credits
 These people have helped this project in some way or another, so they should be the ones who receive all the credit:
