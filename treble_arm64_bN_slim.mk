@@ -3,7 +3,7 @@ include build/make/target/product/aosp_arm64.mk
 $(call inherit-product, device/phh/treble/base.mk)
 
 
-$(call inherit-product, device/phh/treble/pixel.mk)
+$(call inherit-product, device/phh/treble/tpp.mk)
 
 PRODUCT_NAME := treble_arm64_bN_slim
 PRODUCT_DEVICE := tdgsi_arm64_ab
