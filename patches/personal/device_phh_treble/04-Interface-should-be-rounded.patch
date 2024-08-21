@@ -1,0 +1,22 @@
+From afbee5aa90cd67d85308a17982b57c3047b790ef Mon Sep 17 00:00:00 2001
+From: MisterZtr <andey2004586@gmail.com>
+Date: Wed Jul 24 20:06:57 2024 +0300
+Subject: [PATCH 4] Interface should be rounded
+
+diff --git a/overlay/frameworks/base/core/res/res/values/config.xml b/overlay/frameworks/base/core/res/res/values/config.xml
+index b832a66..4a6e497 100644
+--- a/overlay/frameworks/base/core/res/res/values/config.xml
++++ b/overlay/frameworks/base/core/res/res/values/config.xml
+@@ -30,8 +30,8 @@
+        <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
+        <bool name="config_swipe_up_gesture_setting_available">true</bool>
+        <bool name="config_smart_battery_available">true</bool>
+-       <dimen name="config_dialogCornerRadius">8.0dip</dimen>
+-       <dimen name="config_buttonCornerRadius">4.0dip</dimen>
++       <dimen name="config_dialogCornerRadius">32.0dip</dimen>
++       <dimen name="config_buttonCornerRadius">32.0dip</dimen>
+ 
+        <bool name="config_cellBroadcastAppLinks">true</bool>
+ 
+--
+2.34.1

@@ -1,0 +1,46 @@
+From 08391b937d5e9cea32b3b838255bfa5da742406a Mon Sep 17 00:00:00 2001
+From: MisterZtr <andey2004586@gmail.com>
+Date: Wed Jul 24 20:52:45 2024 +0300
+Subject: [PATCH] Remove some google apps for slim version
+
+diff --git a/common/common-vendor.mk b/common/common-vendor.mk
+index 8532264..2e31492 100644
+--- a/common/common-vendor.mk
++++ b/common/common-vendor.mk
+@@ -220,25 +220,18 @@ PRODUCT_PACKAGES += \
+     GoogleTTS \
+     LatinIMEGooglePrebuilt \
+     LocationHistoryPrebuilt \
+-    Maps \
+     MarkupGoogle \
+     ModuleMetadataGoogle \
+     NgaResources \
+-    Photos \
+     PixelThemesStub \
+     PixelThemesStub2022_and_newer \
+     PrebuiltDeskClockGoogle \
+-    PrebuiltGmail \
+     SoundAmplifierPrebuilt \
+     SoundPickerPrebuilt \
+     SwitchAccessPrebuilt \
+     TrichromeLibrary-Stub \
+-    WallpaperEmojiPrebuilt-v470 \
+     WebViewGoogle-Stub \
+-    talkback \
+     AICorePrebuilt \
+-    AiWallpapers \
+-    AndroidAutoStubPrebuilt \
+     ConfigUpdater \
+     DeviceIntelligenceNetworkPrebuilt-v.U.14.playstore \
+     DevicePersonalizationPrebuiltPixel2023-v.U.14.playstore \
+@@ -268,7 +261,6 @@ PRODUCT_PACKAGES += \
+     SettingsIntelligenceGooglePrebuilt \
+     SetupWizardPrebuilt \
+     TurboPrebuilt \
+-    Velvet \
+     WallpaperEffect \
+     WeatherPixelPrebuilt \
+     WellbeingPrebuilt \
+
+--
+2.25.1
