@@ -25,7 +25,7 @@ git clone https://github.com/MisterZtr/treble_manifest.git .repo/local_manifests
 repo sync --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
 ```
 
-### After synchronizing the source code, generate private keys to sign the build:
+### After synchronizing the source code, generate private keys to sign the build (IMPORTANT: the keys must be generated without a password):
 ```bash
 subject='/C=US/ST=State/L=City/O=Android/OU=Android/CN=Android/emailAddress=email@example.com'
 for x in releasekey platform shared media networkstack verity otakey testkey sdk_sandbox bluetooth nfc; do \
