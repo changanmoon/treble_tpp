@@ -83,8 +83,9 @@ If you face any conflicts while applying patches, apply the patch manually.
 (This repo doesn't accept any issue as it is used for experimental purpose.)
 
 ## Credits
-This repo is based on [Mitja Ševerkar](https://github.com/mytja)'s work.
-Also, salute to those people who have made their efforts to make Android GSIs possible:
+This repo is based on [Mitja Ševerkar](https://github.com/mytja)'s work, so he should receive all the credits.
+
+Also, salute to these people who have made their efforts to make Android GSIs possible:
 - [The Pixel Project Team](https://github.com/The-Pixel-Project/manifest)
 - [Phhusson](https://github.com/phhusson)
 - [AndyYan](https://github.com/AndyCGYan)
