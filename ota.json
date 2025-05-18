@@ -1,0 +1,16 @@
+{
+    "version": "2025-05-17 (PixelOS May - Android QPR2)",
+    "date": "1747499389",
+    "variants": [
+        {
+            "name": "pixelos_arm64_bgN_erofs",
+            "size": "1853359244",
+            "url": "https://github.com/mytja/treble_pixelos/releases/download/20250517/pixelos_arm64_bgN_erofs-15.0-unofficial-20250517.img.xz"
+        },
+        {
+            "name": "pixelos_arm64_bgN_ext4",
+            "size": "1604970100",
+            "url": "https://github.com/mytja/treble_pixelos/releases/download/20250517/pixelos_arm64_bgN_ext4-15.0-unofficial-20250517.img.xz"
+        }
+    ]
+}
