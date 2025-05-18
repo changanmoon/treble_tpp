@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://avatars.githubusercontent.com/u/82160282?s=200&v=4">
+  <img src="https://avatars.githubusercontent.com/u/166801955?s=200&v=4">
 </p>
 
 ### Building
@@ -10,19 +10,19 @@ As a first step, you'll have to create and enter a folder with the appropriate n
 To do that, run these commands:
 
 ```bash
-mkdir ~/pixelos
-cd ~/pixelos
+mkdir ~/tpp
+cd ~/tpp
 ```
 
-## Initalize the Treble PixelOS repo
+## Initalize the Treble The Pixel Project repo
 ```bash
-repo init --depth=1 -u https://github.com/PixelOS-AOSP/manifest.git -b fifteen --git-lfs
+repo init --depth=1 -u https://github.com/The-Pixel-Project/manifest.git -b 15 --git-lfs
 ```
 
 ## Clone the Manifest
-This adds necessary dependencies for the PixelOS GSI.
+This adds necessary dependencies for the The Pixel Project GSI.
 ```bash
-git clone https://github.com/mytja/treble_manifest.git -b pixelos-fifteen .repo/local_manifests
+git clone https://github.com/changanmoon/treble_manifest.git -b tpp-15 .repo/local_manifests
 ```
 
 ## Sync the repository
@@ -36,7 +36,7 @@ Run this command in the ROM folder:
 ./patches/apply-all.sh .
 ```
 
-This command will apply all TrebleDroid and personal patches. If any patch fails to apply correctly, as indicated by `### FAILED APPLYING` output, you need to apply the patch manually. Steps to do so are described in short on [treble_pixelos_patches repo](https://github.com/mytja/treble_pixelos_patches/blob/fifteen/README.md).
+This command will apply all TrebleDroid and personal patches. If any patch fails to apply correctly, as indicated by `### FAILED APPLYING` output, you need to apply the patch manually. Steps to do so are described in short on [treble_tpp_patches repo](https://github.com/changanmoon/treble_tpp_patches/blob/fifteen/README.md).
 
 ### Turn On Caching
 You can speed up subsequent builds by adding these lines to your `~/.bashrc` OR `~/.zshrc` file:
@@ -50,20 +50,20 @@ export CCACHE_MAXSIZE=50G # 50 GB
 ## Build Treble app
 This GSI uses a modified Treble app in order to achieve more functionality. You need to build the Treble app.
 ```bash
-cd ~/pixelos/treble_app
+cd ~/tpp/treble_app
 
 ./build.sh release
 ```
 
 ## Compilation 
-In the ROM folder (`~/pixelos`), run this to start compilation:
+In the ROM folder (`~/tpp`), run this to start compilation:
 
 ```bash
 source build/envsetup.sh
 
 ccache -M 50G -F 0
 
-lunch pixelos_arm64_bgN_erofs-bp1a-userdebug 
+lunch tpp_arm64_bgN_erofs-bp1a-userdebug 
 
 make systemimage -j$(nproc --all)
 ```
@@ -80,11 +80,12 @@ xz -9 -T0 -v -z system.img
 
 ## Troubleshooting
 If you face any conflicts while applying patches, apply the patch manually.
-For any other issues, report them via the [Issues](https://github.com/mytja/treble_pixelos/issues) tab.
+(This repo doesn't accept any issue as it is used for experimental purpose.)
 
 ## Credits
 These people have helped this project in some way or another, so they should be the ones who receive all the credit:
-- [PixelOS Team](https://github.com/PixelOS)
+- [The Pixel Project Team](https://github.com/The-Pixel-Project/manifest)
+- [Mitja Ševerkar](https://github.com/mytja)
 - [Phhusson](https://github.com/phhusson)
 - [AndyYan](https://github.com/AndyCGYan)
 - [Ponces](https://github.com/ponces)
