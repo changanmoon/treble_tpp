@@ -27,7 +27,7 @@ override BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # OTA
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.system.ota.json_url=https://raw.githubusercontent.com/mytja/treble_pixelos/fifteen/ota.json
+    ro.system.ota.json_url=https://raw.githubusercontent.com/changanmoon/treble_tpp/15/ota.json
 
 # SELinux
 TARGET_USES_PREBUILT_VENDOR_SEPOLICY := true
